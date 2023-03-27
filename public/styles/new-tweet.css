@@ -1,0 +1,38 @@
+.tweets {
+  width: 90%;
+}
+.new-tweet__form {
+  display:flex;
+  gap: 1em;
+  flex-direction: column;
+}
+
+.new-tweet__form__field{
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  border: none;
+  padding: 0;
+}
+
+.new-tweet__form__field > label {
+  position:absolute;
+  top: 10px;
+  font-weight: bold;
+}
+
+.new-tweet__form__field > textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 4px solid #555149;
+}
+
+.counter {
+  font-family: 'Bungee';
+}
+
+.new-tweet__form__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}

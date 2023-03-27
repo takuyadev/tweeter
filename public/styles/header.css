@@ -1,0 +1,16 @@
+.profile-header {
+  display: flex;
+  background-image: url("../images/carbon-fibre-v2.png");
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+  background-color: #ffd54b;
+}
+
+.profile-header__img {
+  margin-top: 175px;
+}
+
+.profile-header__name > h2{
+  margin: 0;
+}

@@ -10,9 +10,20 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
       type="text/css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/index.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -28,14 +39,40 @@
       rel="stylesheet"
     />
   </head>
-  
+
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span class="logo">tweeter</span>
+    <nav class="nav">
+      <span class="nav__logo">tweeter</span>
+      <div class="nav__links">
+        <a class="nav__links__link">Write a new tweet</a>
+        <i class="fa-solid fa-angles-down"></i>
+      </div>
     </nav>
-
+    <header class="profile-header">
+      <div class="profile-header__img">
+        <img src="/images/profile-hex.png" />
+      </div>
+      <br />
+      <div class="profile-header__name">
+        <h2>Your Name</h2>
+      </div>
+    </header>
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="tweets">
+      <section class="new-tweet">
+        <h2 class="new-tweet__heading">Compose Tweet</h2>
+        <form class="new-tweet__form" action="/tweets" method="POST">
+          <fieldset class="new-tweet__form__field">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+          </fieldset>
+          <div class="new-tweet__form__footer">
+            <button class="btn"type="submit">Tweet</button>
+            <output name="" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+    </main>
   </body>
 </html>
