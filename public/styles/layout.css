@@ -3,6 +3,10 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+:root {
+  font-size: 16px;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -28,30 +32,10 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-.nav {
-  height: 120px;
-  width: 100%;
-  background-color: #4056a1;
-  color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0em 1.5em;
-  position: fixed;
-  top: 0;
-}
-
-.nav__logo {
-  font-family: 'Bungee', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
-    sans-serif;
-}
-
-.nav__links {
+.forum {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.5em;
+  gap: 2em;
+  width: 90%;
+  margin: 0 5%;
 }
-
-
-/* 4152A1 */

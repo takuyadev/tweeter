@@ -1,37 +1,39 @@
-.tweets {
+.forum {
   width: 90%;
+  margin: 0 5%;
 }
+
 .new-tweet__form {
-  display:flex;
+  display: flex;
   gap: 1em;
   flex-direction: column;
 }
 
-.new-tweet__form__field{
+.new-tweet__form-field {
   position: relative;
-  display:flex;
+  display: flex;
   flex-direction: column;
   border: none;
   padding: 0;
 }
 
-.new-tweet__form__field > label {
-  position:absolute;
+.new-tweet__form-label {
+  position: absolute;
   top: 10px;
   font-weight: bold;
 }
 
-.new-tweet__form__field > textarea {
+.new-tweet__form-textarea {
   background-color: transparent;
   border: none;
   border-bottom: 4px solid #555149;
 }
 
-.counter {
+.new-tweet__counter {
   font-family: 'Bungee';
 }
 
-.new-tweet__form__footer {
+.new-tweet__form-footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;

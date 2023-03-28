@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/index.css" type="text/css" />
 
     <!-- External JS -->
@@ -30,7 +31,10 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script
+      type="text/javascript"
+      src="/scripts/composer-char-counter.js"
+    ></script>
 
     <!-- External Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -60,19 +64,59 @@
       </div>
     </header>
     <!-- Page-specific (main) content here -->
-    <main class="tweets">
+    <main class="forum">
       <section class="new-tweet">
         <h2 class="new-tweet__heading">Compose Tweet</h2>
         <form class="new-tweet__form" action="/tweets" method="POST">
-          <fieldset class="new-tweet__form__field">
-            <label for="tweet-text">What are you humming about?</label>
-            <textarea name="text" id="tweet-text"></textarea>
+          <fieldset class="new-tweet__form-field">
+            <label class="new-tweet__form-label" for="tweet-text"
+              >What are you humming about?</label
+            >
+            <textarea
+              class="new-tweet__form-textarea"
+              name="text"
+              id="tweet-text"
+            ></textarea>
           </fieldset>
-          <div class="new-tweet__form__footer">
-            <button class="btn"type="submit">Tweet</button>
-            <output name="" class="counter" for="tweet-text">140</output>
+          <div class="new-tweet__form-footer">
+            <button class="btn new-tweet__btn" type="submit">Tweet</button>
+            <output class="new-tweet__counter" name="" for="tweet-text"
+              >140</output
+            >
           </div>
         </form>
+      </section>
+      <section class="tweets">
+        <article class="tweet">
+          <header class="tweet__header">
+            <div class="tweet__user-info">
+              <img
+                class="tweet__user-avatar"
+                src="https://i.imgur.com/73hZDYK.png"
+                alt="Avatar of SirIsaac"
+              />
+              <p class="tweet__user-name" src="" alt="">Newton</p>
+            </div>
+            <p class="tweet__user-tag">@SirIsaac</p>
+          </header>
+          <form action="" class="tweet__form">
+            <textarea type="text" class="tweet__textarea"></textarea>
+          </form>
+          <footer class="tweet__footer">
+            <time class="tweet__date">10 days ago</time>
+            <div class="tweet__btn-wrapper">
+              <button class="tweet__icon-btn tweet__icon-btn--flag">
+                <i class="fa-solid fa-flag"></i>
+              </button>
+              <button class="tweet__icon-btn tweet__icon-btn--like">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <button class="tweet__icon-btn tweet__icon-btn--retweet">
+                <i class="fa-solid fa-retweet"></i>
+              </button>
+            </div>
+          </footer>
+        </article>
       </section>
     </main>
   </body>
