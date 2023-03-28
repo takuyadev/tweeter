@@ -53,18 +53,5 @@ body {
   gap: 0.5em;
 }
 
-.tweets {
-  width: 90%;
-}
-
-#tweet-text {
-  background-color: transparent;
-  border:none;
-  border-bottom: 4px solid #555149;
-}
-
-.counter {
-  font-family: 'Bungee'
-}
 
 /* 4152A1 */
