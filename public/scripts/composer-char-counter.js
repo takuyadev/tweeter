@@ -2,7 +2,16 @@ $(document).ready(function () {
   console.log('ready!');
 
   $('#tweet-text').on('input', function () {
-    $("output[for='tweet-text']").text(this.value.length);
-    console.log(this.value.length);
+    const $output = $("output[for='tweet-text']");
+
+    if (this.value.length < MAX_LENGTH) {
+      $output.css('color', 'black');
+    }
+
+    if (this.value.length > MAX_LENGTH) {
+      $output.css('color', 'red');
+    }
+
+    $output.text(MAX_LENGTH - this.value.length);
   });
 });

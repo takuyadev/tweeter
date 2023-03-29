@@ -31,3 +31,26 @@
   justify-content: space-between;
   align-items: flex-end;
 }
+
+.new-tweet__form-error {
+  display: none;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+  color: red;
+  border: 2px solid red;
+}
+
+.new-tweet__form-error > * {
+  display: inline;
+}
+
+.new-tweet__form-error--show {
+  display: flex;
+}
+
+.new-tweet__form-message {
+  margin: 0;
+}
