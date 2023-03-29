@@ -9,6 +9,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -38,4 +39,18 @@ body {
   gap: 2em;
   width: 90%;
   margin: 0 5%;
+}
+
+.to-top-btn {
+  display:none;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  padding: 1em;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }

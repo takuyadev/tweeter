@@ -140,7 +140,7 @@ const toggleForm = () => {
   }
   if (!isFormOpen) {
     isFormOpen = true;
-    
+
     // Need to wait for form to be focusable
     setTimeout(() => $(`#tweet-text`).focus());
     return $(`#tweet-form`).slideDown('slow');
@@ -151,4 +151,11 @@ $(document).ready(function () {
   loadTweets();
   $('#tweet-form').submit(submitTweetHandler);
   $(`#form-toggle`).click(toggleForm);
+  $(document).scroll(function (event) {
+    const scrollPosition = $(this).scrollTop();
+    if (scrollPosition < 300) {
+      return $('#to-top-btn').fadeOut('fast');
+    }
+    return $('#to-top-btn').fadeIn('fast');
+  });
 });
