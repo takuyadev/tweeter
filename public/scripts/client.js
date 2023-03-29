@@ -1,8 +1,10 @@
+
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 const data = [
   {
     user: {
@@ -51,7 +53,7 @@ const createTweetElement = function (tweet) {
     </header>
     <p className="tweet__content">${tweet.content.text}</p>
     <footer class="tweet__footer">
-      <time class="tweet__date">${tweet.created_at}</time>
+      <time class="tweet__date">${timeago.format(tweet.created_at)}</time>
       <div class="tweet__btn-wrapper">
         <button class="tweet__icon-btn tweet__icon-btn--flag">
           <i class="fa-solid fa-flag"></i>
@@ -69,8 +71,22 @@ const createTweetElement = function (tweet) {
   return $tweet;
 };
 
+const loadTweets = () => {
+  $.ajax({
+    method: 'GET',
+    url: '/tweets',
+  })
+    .then((response) => {
+      return renderTweets(response);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+};
+
 $(document).ready(function () {
-  renderTweets(data);
+  loadTweets();
+
   $('#tweet-form').submit((event) => {
     event.preventDefault();
 
