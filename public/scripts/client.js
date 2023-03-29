@@ -29,6 +29,7 @@ const tweetsData = [
   },
 ];
 
+let isFormOpen = false;
 const MIN_LENGTH = 0;
 const MAX_LENGTH = 140;
 
@@ -46,14 +47,15 @@ const submitTweetHandler = function (event) {
 
   // Handle error based on if content is too long or too short
   if ($textareaValue.val().length > MAX_LENGTH) {
-    $('#error-message p').text('Server bandwidth dont grow on trees. (140 max)');
-    return $('#error-message').slideDown("slow")
-
+    $('#error-message p').text(
+      'Server bandwidth dont grow on trees. (140 max)'
+    );
+    return $('#error-message').slideDown('slow');
   }
 
   if ($textareaValue.val().length === MIN_LENGTH) {
     $('#error-message p').text('Theres nothin here (type anything)');
-    return $('#error-message').slideDown("slow")
+    return $('#error-message').slideDown('slow');
   }
 
   // Post tweet to server
@@ -61,14 +63,14 @@ const submitTweetHandler = function (event) {
     method: 'POST',
     data: $(this).serialize(),
     url: '/tweets',
-    success: () => {},
+    success: () => {
+      // Clear text box, and reload tweets
+      $textareaValue.val('');
+      $('#error-message').slideUp('slow');
+      loadTweets();
+    },
     error: () => {},
   });
-
-  // Clear text box, and reload tweets
-  $textareaValue.val('');
-  $('#error-message').hide("slow")
-  loadTweets();
 };
 
 // Render multiple tweets
@@ -130,7 +132,23 @@ const loadTweets = () => {
     });
 };
 
+// Toggles form on and off
+const toggleForm = () => {
+  if (isFormOpen) {
+    isFormOpen = false;
+    return $(`#tweet-form`).slideUp('slow');
+  }
+  if (!isFormOpen) {
+    isFormOpen = true;
+    
+    // Need to wait for form to be focusable
+    setTimeout(() => $(`#tweet-text`).focus());
+    return $(`#tweet-form`).slideDown('slow');
+  }
+};
+
 $(document).ready(function () {
   loadTweets();
   $('#tweet-form').submit(submitTweetHandler);
+  $(`#form-toggle`).click(toggleForm);
 });

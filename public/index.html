@@ -55,10 +55,10 @@
     <!-- Top nav bar (fixed) -->
     <nav class="nav">
       <span class="nav__logo">tweeter</span>
-      <div class="nav__links">
+      <button id="form-toggle" class="nav__links">
         <a class="nav__links__link">Write a new tweet</a>
-        <i class="fa-solid fa-angles-down"></i>
-      </div>
+        <i class="nav__links-icon fa-solid fa-angles-down"></i>
+      </button>
     </nav>
     <header class="profile-header">
       <div class="profile-header__img">
@@ -72,13 +72,13 @@
     <!-- Page-specific (main) content here -->
     <main class="forum">
       <section class="new-tweet">
-        <h2 class="new-tweet__heading">Compose Tweet</h2>
         <form
           id="tweet-form"
           class="new-tweet__form"
           action="/tweets"
           method="POST"
         >
+          <h2 class="new-tweet__heading">Compose Tweet</h2>
           <fieldset class="new-tweet__form-field">
             <div id="error-message" class="new-tweet__form-error">
               <i class="fa-solid fa-triangle-exclamation"></i>
