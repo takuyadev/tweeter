@@ -2,7 +2,7 @@
 .tweets {
   display: flex;
   flex-direction: column;
-  gap: 4;
+  gap: 1em;
 }
 
 .tweet {
@@ -25,7 +25,8 @@
 
 /* Header */
 
-.tweet__user-info, .tweet__user-tag {
+.tweet__user-info,
+.tweet__user-tag {
   display: flex;
   align-items: center;
   gap: 0.5em;
@@ -47,6 +48,8 @@
 
 /* Footer */
 .tweet__footer {
+  padding-top: 1em;
+  border-top: 4px solid #555149;
   align-items: end;
 }
 
@@ -64,9 +67,7 @@
   cursor: pointer;
 }
 
-.tweet__textarea {
+.tweet__content {
   width: 100%;
   background-color: transparent;
-  border: none;
-  border-bottom: 4px solid #555149;
 }

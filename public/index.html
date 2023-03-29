@@ -67,7 +67,7 @@
     <main class="forum">
       <section class="new-tweet">
         <h2 class="new-tweet__heading">Compose Tweet</h2>
-        <form class="new-tweet__form" action="/tweets" method="POST">
+        <form id="tweet-form" class="new-tweet__form" action="/tweets" method="POST">
           <fieldset class="new-tweet__form-field">
             <label class="new-tweet__form-label" for="tweet-text"
               >What are you humming about?</label
@@ -86,38 +86,7 @@
           </div>
         </form>
       </section>
-      <section class="tweets">
-        <article class="tweet">
-          <header class="tweet__header">
-            <div class="tweet__user-info">
-              <img
-                class="tweet__user-avatar"
-                src="https://i.imgur.com/73hZDYK.png"
-                alt="Avatar of SirIsaac"
-              />
-              <p class="tweet__user-name" src="" alt="">Newton</p>
-            </div>
-            <p class="tweet__user-tag">@SirIsaac</p>
-          </header>
-          <form action="" class="tweet__form">
-            <textarea type="text" class="tweet__textarea"></textarea>
-          </form>
-          <footer class="tweet__footer">
-            <time class="tweet__date">10 days ago</time>
-            <div class="tweet__btn-wrapper">
-              <button class="tweet__icon-btn tweet__icon-btn--flag">
-                <i class="fa-solid fa-flag"></i>
-              </button>
-              <button class="tweet__icon-btn tweet__icon-btn--like">
-                <i class="fa-solid fa-heart"></i>
-              </button>
-              <button class="tweet__icon-btn tweet__icon-btn--retweet">
-                <i class="fa-solid fa-retweet"></i>
-              </button>
-            </div>
-          </footer>
-        </article>
-      </section>
+      <section id="tweets-container" class="tweets"></section>
     </main>
   </body>
 </html>
