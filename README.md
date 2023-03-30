@@ -7,6 +7,7 @@ This repository is the starter code for the project: Students will fork and clon
 ## Screenshots 
 
 !["Screenshot of desktop view"](https://github.com/takuyadev/tweeter/blob/master/docs/desktop.png)
+!["Screenshot of mobile view"](https://github.com/takuyadev/tweeter/blob/master/docs/mobile.png)
 !["Screenshot of tweets"](https://github.com/takuyadev/tweeter/blob/master/docs/video_example.gif)
 
 ## Getting Started
