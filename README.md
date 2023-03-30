@@ -16,3 +16,12 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Class Design System
+Classes are named and styled using the BEM naming scheme, where we name classes based on:
+
+- Block (ex. header)
+- Element (ex. nav)
+- Modifier (ex. active)
+
+```.header__nav--active```
