@@ -1,6 +1,5 @@
+// Listen counter text on document load
 $(document).ready(function () {
-  console.log('ready!');
-
   $('#tweet-text').on('input', function () {
     const $output = $("output[for='tweet-text']");
 
