@@ -64,9 +64,10 @@ const submitTweetHandler = function (event) {
     data: $(this).serialize(),
     url: '/tweets',
     success: () => {
-      // Clear text box, and reload tweets
+      // Clear text box, reload tweets, reset counter
       $textareaValue.val('');
       $('#error-message').slideUp('slow');
+      $("output[for='tweet-text']").text("140")
       loadTweets();
     },
     error: () => {},
