@@ -1,7 +1,8 @@
 .btn {
   font-family: 'Bungee';
   padding: 0.25em 0.5em;
-  background-color: #4056A1;
+  background-color: #4056a1;
   color: white;
   border: none;
+  cursor: pointer;
 }

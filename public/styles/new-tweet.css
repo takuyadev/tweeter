@@ -33,6 +33,10 @@
   align-items: flex-end;
 }
 
+.new-tweet__form-footer {
+  z-index: 10
+}
+
 .new-tweet__form-error {
   display: none;
   gap: 1em;
